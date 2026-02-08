@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #e5e5e5;
+  --habitat-green: #10b981;
+  --habitat-green-glow: rgba(16, 185, 129, 0.15);
+  --selection: #10b981;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-habitat-green: var(--habitat-green);
+  --color-habitat-glow: var(--habitat-green-glow);
+}
+
+* {
+  selection-background-color: var(--selection);
+  selection-color: var(--background);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+pre, code {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.terminal-glow {
+  box-shadow: 0 0 20px var(--habitat-green-glow);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #10b981, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
