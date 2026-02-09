@@ -6,12 +6,13 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded bg-habitat-green flex items-center justify-center">
-              <span className="text-black font-bold text-xl">H</span>
-            </div>
-            <span className="text-white font-bold tracking-tight">HABITAT <span className="text-habitat-green">SKILLS</span></span>
-          </div>
+          <Link href="/" className="flex items-center group">
+            <span className="text-white/40 font-mono text-xl group-hover:text-habitat-green transition-colors">[</span>
+            <span className="px-2 text-white font-bold tracking-tight">
+              HABITAT <span className="text-habitat-green">SKILLS</span>
+            </span>
+            <span className="text-white/40 font-mono text-xl group-hover:text-habitat-green transition-colors">]</span>
+          </Link>
           
           <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-white/60">
             <Link href="#skills" className="hover:text-habitat-green transition-colors">Skills</Link>
